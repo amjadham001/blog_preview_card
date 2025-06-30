@@ -1,1 +1,226 @@
 @import "tailwindcss";
+
+/* ========================================
+   FONT LOADING STRATEGY
+   ========================================
+   
+   This file implements a progressive font loading strategy:
+   1. Variable fonts for modern browsers (efficient, single file)
+   2. Static fonts for older browsers (compatible, specific weights)
+   3. System fonts as ultimate fallback (always available)
+   
+   Browser Support:
+   - Modern browsers (Chrome 62+, Firefox 62+, Safari 11+): Use variable fonts
+   - Older browsers: Use static fonts or system fonts
+   - Very old browsers: Fall back to system fonts
+   ======================================== */
+
+/* ========================================
+   VARIABLE FONTS (Modern Browsers)
+   ========================================
+   
+   Variable fonts contain multiple weights/styles in a single file.
+   They're more efficient but require modern browser support.
+   
+   Format Fallbacks:
+   - "truetype-variations": Modern browsers that understand variable fonts
+   - "truetype": Older browsers that load the file but treat it as regular font
+   ======================================== */
+@font-face {
+	font-family: "Figtree";
+	src:
+		url("../assets/fonts/Figtree-VariableFont_wght.ttf")
+			format("truetype-variations"),
+		url("../assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+	font-weight: 300 900; /* Weight range - only works with truetype-variations */
+	font-style: normal;
+	font-display: swap; /* Show fallback font immediately, swap when loaded */
+}
+
+@font-face {
+	font-family: "Figtree";
+	src:
+		url("../assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+			format("truetype-variations"),
+		url("../assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+			format("truetype");
+	font-weight: 300 900; /* Weight range - only works with truetype-variations */
+	font-style: italic;
+	font-display: swap; /* Show fallback font immediately, swap when loaded */
+}
+
+/* ========================================
+   STATIC FONTS (Older Browsers)
+   ========================================
+   
+   Static fonts are traditional font files - one file per weight/style.
+   They work in all browsers but require multiple files for different weights.
+   
+   Why only one format?
+   - Static fonts are traditional technology with universal browser support
+   - No need for format fallbacks like variable fonts
+   
+   Why no font-display: swap?
+   - Static fonts are smaller and load faster than variable fonts
+   - No complex fallback chain needed - they either load or don't
+   - Browser's default font-display behavior is usually sufficient
+   ======================================== */
+
+/* Note: You currently only have Medium and ExtraBold static fonts. 
+   To get complete fallback support, download the missing static fonts */
+
+/* Available static fonts */
+@font-face {
+	font-family: "Figtree-Static";
+	src: url("../assets/fonts/static/Figtree-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	/* No font-display needed - browser handles loading efficiently */
+}
+
+@font-face {
+	font-family: "Figtree-Static";
+	src: url("../assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype");
+	font-weight: 800;
+	font-style: normal;
+	/* No font-display needed - browser handles loading efficiently */
+}
+
+/* ========================================
+   MISSING STATIC FONTS
+   ========================================
+   
+   The following static fonts are mentioned in README.txt but not included:
+   - Light (300), Regular (400), SemiBold (600), Bold (700), Black (900)
+   - All italic variants
+   
+   Uncomment these when you have the complete static font set.
+   ======================================== */
+
+/* Missing static fonts (uncomment when you have the files):
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree-Static";
+  src: url("../assets/fonts/static/Figtree-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+*/
+
+/* ========================================
+   CUSTOM DESIGN TOKEN
+   ========================================
+   
+   This creates a progressive fallback chain:
+   1. "Figtree" - Variable fonts (modern browsers)
+   2. "Figtree-Static" - Static fonts (older browsers)
+   3. System fonts - Ultimate fallback (always available)
+   
+   Usage:
+   - In CSS: font-family: theme(font-figtree);
+   - In Tailwind: font-family: theme(font-figtree);
+   ======================================== */
+@theme {
+	--font-figtree:
+		"Figtree", "Figtree-Static", "Segoe UI", "Roboto", "Helvetica Neue",
+		"Arial", "Noto Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+	--custom-line-height: 150%;
+
+	--color-custom-yellow: hsl(47, 88%, 63%);
+	--color-custom-gray-500: hsl(0, 0%, 42%);
+	--color-custom-gray-950: hsl(0, 0%, 7%);
+
+	--custom-radius-lg: 0.625rem;
+	--custom-radius-2xl: 1.25rem;
+
+	--custom-shadow: 8px 8px 0 0 #000;
+}
