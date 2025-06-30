@@ -258,22 +258,29 @@ The following static fonts are mentioned in `README.txt` but not included:
 
 ### Usage Examples
 
+To use these custom properties, you should use the standard CSS `var()` function.
+
 ```css
 /* In CSS */
 .heading {
-  font-family: theme(font-figtree);
+  font-family: var(--font-figtree);
   font-weight: 800;
 }
 
 .body-text {
-  font-family: theme(font-figtree);
+  font-family: var(--font-figtree);
   font-weight: 400;
 }
+```
 
-/* In Tailwind classes */
-.text-element {
-  font-family: theme(font-figtree);
-}
+```html
+<!-- In Tailwind classes (using arbitrary values) -->
+<h1 class="font-[var(--font-figtree)] font-extrabold">
+  Your Title
+</h1>
+<p class="font-[var(--font-figtree)]">
+  Your paragraph text.
+</p>
 ```
 
 ---
