@@ -66,9 +66,6 @@
    - Browser's default font-display behavior is usually sufficient
    ======================================== */
 
-/* Note: You currently only have Medium and ExtraBold static fonts. 
-   To get complete fallback support, download the missing static fonts */
-
 /* Available static fonts */
 @font-face {
 	font-family: "Figtree-Static";
@@ -87,115 +84,6 @@
 }
 
 /* ========================================
-   MISSING STATIC FONTS
-   ========================================
-   
-   The following static fonts are mentioned in README.txt but not included:
-   - Light (300), Regular (400), SemiBold (600), Bold (700), Black (900)
-   - All italic variants
-   
-   Uncomment these when you have the complete static font set.
-   ======================================== */
-
-/* Missing static fonts (uncomment when you have the files):
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-Bold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-Black.ttf") format("truetype");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-SemiBoldItalic.ttf") format("truetype");
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-ExtraBoldItalic.ttf") format("truetype");
-  font-weight: 800;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Figtree-Static";
-  src: url("../assets/fonts/static/Figtree-BlackItalic.ttf") format("truetype");
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-*/
-
-/* ========================================
    CUSTOM DESIGN TOKEN
    ========================================
    
@@ -204,9 +92,6 @@
    2. "Figtree-Static" - Static fonts (older browsers)
    3. System fonts - Ultimate fallback (always available)
    
-   Usage:
-   - In CSS: font-family: theme(font-figtree);
-   - In Tailwind: font-family: theme(font-figtree);
    ======================================== */
 @theme {
 	--font-figtree:

@@ -17,3 +17,6 @@
 
 # Avoid accidental upload of the node_modules folder
 node_modules/
+
+# Avoid accidental upload of the temp.txt file
+temp.txt
