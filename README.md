@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/amjadham001/frontend_mentor-blog_preview_card)
-- Live Site URL: [Live Demo](https://amjadham001.github.io/frontend_mentor-blog_preview_card/)
+- Solution URL: [GitHub Repository](https://github.com/amjadham001/blog_preview_card)
+- Live Site URL: [Live Demo](https://amjadham001.github.io/blog_preview_card/)
 
 ## My process
 
