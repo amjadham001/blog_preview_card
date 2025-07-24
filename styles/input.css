@@ -64,6 +64,7 @@
    - Static fonts are smaller and load faster than variable fonts
    - No complex fallback chain needed - they either load or don't
    - Browser's default font-display behavior is usually sufficient
+   - HOWEVER it's RECOMMENDED to put it always
    ======================================== */
 
 /* Available static fonts */
